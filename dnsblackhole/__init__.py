@@ -46,7 +46,7 @@ def load_config():
             sys.exit()
 
         try:
-            yaml_config = yaml.load(f)
+            yaml_config = yaml.safe_load(f)
         except yaml.YAMLError as exc:
             print("Error in configuration file: {0}".format(exc))
 
